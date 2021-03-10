@@ -1,0 +1,288 @@
+:root {
+  --main-color: #4b0082;
+  --second-color: #327ea7;
+  --third-color: #384955;
+  --highlight-color: #88b0cd;
+  --main-font: "Ubuntu", sans-serif;
+  --second-font: "Oxygen", sans-serif;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--third-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--highlight-color);
+  border-style: solid;
+  border-width: 4px 0px;
+  /* 5px top and bottom, 20px on the sides */
+  border-color: var(--second-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--second-color);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  overflow-x: hidden;
+
+  font-family: var(--main-font);
+  font-size: 1.2rem;
+
+  background-color: var(--third-color);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+h1,
+h2,
+p {
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+/* Loader */
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--main-color);
+}
+
+/* spinner */
+.loader__spinner {
+  width: 120px;
+  height: 120px;
+
+  border: 10px solid transparent;
+  border-radius: 50%;
+  border-top-color: var(--second-color);
+  border-bottom-color: var(--second-color);
+
+  filter: drop-shadow(0 0 5px var(--second-color));
+  animation: spin 0.7s linear infinite;
+}
+
+/* spinner animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    border-width: 10px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 10px;
+  }
+}
+
+svg {
+  fill: #fff;
+  display: block;
+}
+
+.social-icons {
+}
+
+.social-icons__list {
+  display: flex;
+  gap: 25px;
+}
+
+.social-icons__list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: currentColor;
+}
+
+.creator .social-icons__list-item {
+  background: var(--main-color);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.2),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.05);
+}
+
+.social-icon {
+  display: block;
+  height: auto;
+  width: 30px;
+  transition: all 0.5s;
+}
+
+.social-icon-text {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 98;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+
+  color: white;
+
+  background: var(--main-color);
+  box-shadow: 0 5px 10px black;
+}
+
+.logo {
+  width: 20%;
+
+  font-size: 2rem;
+  text-align: center;
+}
+
+.logo div {
+  font-size: 0.9rem;
+}
+
+nav {
+  width: 60%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav li {
+  list-style: none;
+}
+
+header a {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.playBtn {
+  background-color: var(--highlight-color);
+  border-radius: 10px;
+}
+
+section {
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+
+  z-index: 1;
+
+  scroll-snap-align: start;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article {
+  width: 50%;
+}
+
+aside {
+  width: 45%;
+}
+
+.intro {
+  background-color: var(--second-color);
+  box-shadow: 0 5px 10px black;
+}
+
+img,
+video {
+  width: 100%;
+  display: block;
+}
+
+.creator {
+  background: url("../img/creator-bg.jpg") fixed center / cover;
+  color: white;
+  box-shadow: 0 5px 10px black;
+}
+
+.creator::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(75, 0, 130, 0.2);
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 35%;
+}
+
+.tools {
+  display: flex;
+}
+
+.toolIcon {
+  width: 200px;
+  height: 200px;
+}
+
+footer {
+  display: flex;
+  min-height: 10vh;
+  scroll-snap-align: end;
+}
