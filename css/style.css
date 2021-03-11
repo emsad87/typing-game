@@ -286,3 +286,45 @@ footer {
   min-height: 10vh;
   scroll-snap-align: end;
 }
+
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 700px) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+  body {
+    font-size: 1rem;
+  }
+  .container {
+    padding: 100px 0;
+    flex-direction: column;
+  }
+
+  article,
+  aside {
+    width: 100%;
+  }
+
+  header,
+  nav ul {
+    flex-direction: column;
+  }
+  nav {
+    display: none;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

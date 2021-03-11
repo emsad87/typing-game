@@ -32,6 +32,7 @@
             </a>
 
         </div>
+        <div class="hamburger" onclick="hamMenu()">&#9776;</div>
         <nav>
             <ul>
                 <li><a href="#intro">Intro</a></li>
@@ -200,6 +201,16 @@
         document.querySelectorAll('.copy-year').forEach((element) => {
             element.innerText = new Date().getFullYear();
         });
+
+        function hamMenu() {
+            let menu = document.querySelector("nav");
+
+            if (menu.style.display === "none") {
+                menu.style.display = "block"
+            } else {
+                menu.style.display = "none"
+            }
+        }
     </script>
 </body>
 
