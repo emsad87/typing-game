@@ -3,7 +3,7 @@
 Type as fast as you can...
 Practice your typing skills and test your typing speed with TTT (Typing Typing Typing) by typing nice quotes.
 
-![Typing game preview](./TTT.png)
+<img src="./TTT.png" width="500px">
 
 # About
 
@@ -14,6 +14,8 @@ Made with html, css and javascript.
 
 # How to play
 
+<img src="./img/howto.png" width="500px">
+
 1. Click start
 2. Start typing quote
 3. Type as fast as you can
@@ -22,11 +24,13 @@ Made with html, css and javascript.
 
 # Tools used
 
-- Html
-- Css
-- Javascript
+<img src="./img/svg/html.svg" width="250px" height="250">
+<img src="./img/svg/css.svg" width="250px" height="250">
+<img src="./img/svg/javascript.svg" width="250px" height="250">
 
 # Creator
+
+<img src="./img/emsad.jpg" width="250px" style="border-radius: 50%;">
 
 ## Emsad Ahmetašević
 
