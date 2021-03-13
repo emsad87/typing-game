@@ -1,5 +1,7 @@
 # Typing Typing Typing
 
+# [LIVE WEBPAGE](https://emsad87.github.io/typing-game/) (https://emsad87.github.io/typing-game/)
+
 Type as fast as you can...
 Practice your typing skills and test your typing speed with TTT (Typing Typing Typing) by typing nice quotes.
 
