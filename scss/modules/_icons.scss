@@ -1,0 +1,45 @@
+/* svg */
+svg {
+  fill: currentColor;
+  display: block;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons__list {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.social-icons__list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: currentColor;
+}
+
+.creator .social-icons__list-item {
+  background: var(--main-color);
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.2),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.05);
+}
+
+.social-icon {
+  display: block;
+  height: auto;
+  width: 32px;
+  transition: all 0.5s;
+}
+
+.social-icon-text {
+  display: inline-block;
+  padding-left: 15px;
+}

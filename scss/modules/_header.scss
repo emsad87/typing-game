@@ -1,0 +1,58 @@
+/* Header */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 98;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: auto;
+  padding: 15px;
+
+  text-align: center;
+
+  background: var(--main-color);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 10px black;
+
+  a {
+    text-decoration: none;
+    color: currentColor;
+  }
+
+  .navbar__toggle {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
+    cursor: pointer;
+    color: currentColor;
+
+    span {
+      display: block;
+
+      width: 25px;
+      height: 10px;
+
+      border-top: 3px solid currentColor;
+    }
+  }
+
+  .navbar__links {
+    display: none;
+    margin-top: 25px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .active {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

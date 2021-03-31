@@ -1,6 +1,7 @@
 import quotes_array from "./modules/quotes.js";
+import * as f from "./modules/functions.js";
 // define the time limit
-let TIME_LIMIT = 60;
+let TIME_LIMIT = 10;
 
 // selecting required elements
 let timer_text = document.querySelector(".curr_time");
@@ -22,6 +23,7 @@ let error_group = document.querySelector(".errors");
 let accuracy_group = document.querySelector(".accuracy");
 
 let info_bar = document.querySelector(".info");
+let panel = document.querySelector(".panel");
 let body = document.querySelector("body");
 
 let timeLeft = TIME_LIMIT;
@@ -111,6 +113,7 @@ function processCurrentText() {
   // irrespective of errors
   if (curr_input.length == current_quote.length) {
     updateQuote();
+    f.updateSound();
 
     // update total errors
     total_errors += errors;
@@ -130,6 +133,10 @@ function updateTimer() {
 
     // update the timer text
     timer_text.textContent = timeLeft + "s";
+
+    if (timeLeft <= 5) {
+      f.timeSound();
+    }
   } else {
     // finish the game
     finishGame();
@@ -139,12 +146,13 @@ function updateTimer() {
 function finishGame() {
   // stop the timer
   clearInterval(timer);
+  f.endSound();
 
   // hidde the input area
   input_area.style.display = "none";
 
   // show finishing text
-  quote_text.textContent = "Click restart to start a new game.";
+  quote_text.textContent = "Time out.";
 
   // display restart button
   restart_btn.style.display = "block";
@@ -160,9 +168,13 @@ function finishGame() {
   // display the cpm and wpm
   cpm_group.style.display = "block";
   wpm_group.style.display = "block";
+
+  info_bar.classList.add("finResult");
+  panel.classList.add("finPanel");
 }
 
 function startGame() {
+  f.startSound();
   resetValues();
   updateQuote();
   input_area.focus();
@@ -170,6 +182,10 @@ function startGame() {
   // clear old and start a new timer
   clearInterval(timer);
   timer = setInterval(updateTimer, 1000);
+
+  input_area.addEventListener("keydown", f.typingSound);
+  info_bar.classList.remove("finResult");
+  panel.classList.remove("finPanel");
 }
 
 function resetValues() {

@@ -23,7 +23,7 @@
     <meta property="og:site_name" content="TTT Typing Game by Emsad | JS Hacks: Typing Karaoke Hackaton by Mintbean">
     <meta name="twitter:image:alt" content="TTT Typing Game Preview">
 
-    <title>Typing Typing Typing</title>
+    <title>TTT Typing Game by Emsad | JS Hacks: Typing Karaoke Hackaton by Mintbean</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
@@ -41,154 +41,145 @@
         <div class="loader__spinner"></div>
     </div>
 
-    <header>
+    <nav>
         <div class="logo">
             <a href="#intro">
-                TTT
-                <div>Simple Typing Game</div>
+                <div>TTT</div>
+                <small>Simple Typing Game</small>
             </a>
-
         </div>
-        <div class="hamburger" onclick="hamMenu()">&#9776;</div>
-        <nav>
-            <ul>
-                <li><a href="#intro">Intro</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#creator">Creator</a></li>
-                <li><a class="playBtn" href="./game">Play the Game</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="navbar__toggle" id="js-navbar-toggle"></div>
+        <ul id="js-menu" class="navbar__links">
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#creator">Creator</a></li>
+            <li><a class="playBtn" href="./game">Play the Game</a></li>
+        </ul>
+    </nav>
 
-    <section id="intro" class="intro">
+    <header id="intro" class="intro">
 
         <div class="container">
+
             <article>
                 <h1>Typing Typing Typing</h1>
                 <p>Type as fast as you can...</p>
                 <p>Practice your typing skills and test your typing speed with TTT (Typing Typing Typing) by typing nice
                     quotes.</p>
+                <a class="playBtn" href="./game">Play the Game</a>
             </article>
             <aside>
-                <img class="animate__animated animate__fadeInRight" src="./img/intro.png" alt="">
-            </aside>
-        </div>
-
-    </section>
-
-    <section id="about" class="about">
-
-        <div class="container">
-            <aside>
-                <img class="animate__animated animate__fadeInLeft" src="./img/howto.png" alt="">
-            </aside>
-            <article>
-                <h2>About</h2>
-                <p>
-                    This is a simple typing game made for the <br />
-                    <a href="https://www.mintbean.io/">"JS Hacks: Typing Karaoke" Hackaton by Mintbean</a>
-                </p>
-                <p>
-                    Made with html, css and javascript.
-                </p>
-            </article>
-        </div>
-
-    </section>
-
-    <section class="about">
-
-        <div class="container">
-            <aside>
-                <video autoplay loop>
-                    <source src="./vid/ttt.webm" type="video/webm">
-                    Your browser does not support the video tag.
-                </video>
-            </aside>
-            <article>
-                <h2>How to play</h2>
-                <ol>
-                    <li>Click start</li>
-                    <li>Start typing quote</li>
-                    <li>Type as fast as you can</li>
-                    <li>Make as few mistakes as possible</li>
-                    <li>Have fun...</li>
-                </ol>
-            </article>
-        </div>
-
-    </section>
-
-    <section class="about">
-
-        <div class="container">
-
-            <h2>Tools used:</h2>
-            <img class="toolIcon" src="./img/svg/html.svg" alt="">
-            <img class="toolIcon" src="./img/svg/css.svg" alt="">
-            <img class="toolIcon" src="./img/svg/javascript.svg" alt="">
-
-
-        </div>
-
-    </section>
-
-    <section id="creator" class="creator">
-
-        <div class="container">
-            <article>
-                <img class="avatar" src="./img/emsad.jpg" alt="">
-                <h2>Emsad Ahmetašević</h2>
-                <p>Hi !</p>
-                <p>
-                    I am a positive, creative and fun person seeking more knowledge and opportunities to improve and
-                    show my best.
-                </p>
-                <p>In love with web development. Self-taught front-end developer.</p>
-
-                <div class="social-icons">
-                    <ul class="social-icons__list">
-                        <li class="social-icons__list-item">
-                            <a class="social-icon linkedin" href="https://www.linkedin.com/in/emsad" title="LinkedIn"
-                                target="_blank">
-                                <svg viewbox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M68.4,34.50000610351563 c0,19 -15.3,34.5 -34.2,34.5 c-18.9,0 -34.2,-15.4 -34.2,-34.5 c0,-19 15.3,-34.5 34.2,-34.5 C53.099999999999994,0.000006103515630684342 68.4,15.50000610351563 68.4,34.50000610351563 zM63.400000000000006,93.40000610351564 h-57.8 V280.20000610351565 h57.8 V93.40000610351564 zM155.8,93.40000610351564 h-55.4 V280.20000610351565 h55.4 c0,0 0,-69.3 0,-98 c0,-26.3 12.1,-41.9 35.2,-41.9 c21.3,0 31.5,15 31.5,41.9 c0,26.9 0,98 0,98 h57.5 c0,0 0,-68.2 0,-118.3 c0,-50 -28.3,-74.2 -68,-74.2 c-39.6,0 -56.3,30.9 -56.3,30.9 v-25.2 H155.8 z" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social-icons__list-item">
-                            <a class="social-icon website" href="https://emsad87.github.io/" title="Website">
-                                <svg width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M 16 3 C 8.832 3 3 8.832 3 16 C 3 23.168 8.832 29 16 29 C 23.168 29 29 23.168 29 16 C 29 8.832 23.168 3 16 3 z M 16 5 C 16.338 5 16.67 5.0207813 17 5.0507812 L 17 7 L 15 7 L 14 10 L 13 10 L 13 11 L 18 11 L 19 12 L 20 12 L 20 13 L 19 14 L 15 13 L 11 16 L 11 19 L 13 21 L 16 21 L 16 23.5 L 17 26 L 18 26 L 21 22 L 21 21 L 22 19 L 22 18 L 21 18 L 20 16 L 21 15 L 22.5 16 L 25 15 L 25 14 L 26.808594 14 C 26.928594 14.65 27 15.316 27 16 C 27 22.065 22.065 27 16 27 C 9.935 27 5 22.065 5 16 C 5 9.935 9.935 5 16 5 z" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social-icons__list-item">
-                            <a class="social-icon github" href="https://github.com/emsad87" title="GitHub"
-                                target="_blank">
-                                <svg viewbox="0 0 372 363" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M185.89999389648438,0.000003051757815342171 c-102.6,0 -185.9,83.2 -185.9,185.9 c0,82.1 53.3,151.8 127.1,176.4 c9.3,1.7000000000000002 12.3,-4 12.3,-8.9 V318.7000030517578 c-51.7,11.3 -62.5,-21.9 -62.5,-21.9 c-8.4,-21.5 -20.6,-27.2 -20.6,-27.2 c-16.9,-11.5 1.3,-11.3 1.3,-11.3 c18.7,1.3 28.5,19.2 28.5,19.2 c16.6,28.4 43.5,20.2 54.1,15.4 c1.7000000000000002,-12 6.5,-20.2 11.8,-24.9 c-41.3,-4.7 -84.7,-20.6 -84.7,-91.9 c0,-20.3 7.3,-36.9 19.2,-49.9 c-1.9,-4.7 -8.3,-23.6 1.8,-49.2 c0,0 15.6,-5 51.1,19.1 c14.8,-4.1 30.7,-6.2 46.5,-6.3 c15.8,0.1 31.7,2.1 46.6,6.3 c35.5,-24 51.1,-19.1 51.1,-19.1 c10.1,25.6 3.8,44.5 1.8,49.2 c11.9,13 19.1,29.6 19.1,49.9 c0,71.4 -43.5,87.1 -84.9,91.7 c6.7,5.8 12.8,17.1 12.8,34.4 c0,24.9 0,44.9 0,51 c0,4.9 3,10.7 12.4,8.9 c73.8,-24.6 127,-94.3 127,-176.4 C371.79999389648435,83.20000305175782 288.4999938964844,0.000003051757815342171 185.89999389648438,0.000003051757815342171 z" />
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-            </article>
-            <aside>
-                <img class="animate__animated animate__fadeInRight" src="./img/creator.png" alt="">
+                <img src="./img/intro.png" alt="">
             </aside>
 
         </div>
 
-    </section>
+    </header>
+
+    <main class="main">
+
+        <div class="container">
+
+            <section id="about" class="about">
+                <article>
+                    <h2>About</h2>
+                    <p>
+                        This is a simple typing game made for the <br />
+                        <a href="https://www.mintbean.io/">"JS Hacks: Typing Karaoke" Hackaton by Mintbean</a>
+                    </p>
+                    <p>
+                        Made with html, css and javascript.
+                    </p>
+                </article>
+                <aside>
+                    <img src="./img/howto.png" alt="">
+                </aside>
+            </section>
+
+            <section class="how-to-play">
+                <article>
+                    <h2>How to play</h2>
+                    <ol>
+                        <li>Click start</li>
+                        <li>Start typing quote</li>
+                        <li>Type as fast as you can</li>
+                        <li>Make as few mistakes as possible</li>
+                        <li>Have fun...</li>
+                    </ol>
+                </article>
+                <aside>
+                    <video autoplay loop>
+                        <source src="./vid/ttt.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </aside>
+            </section>
+
+            <section class="tools">
+                <h2>Tools used:</h2>
+                <img class="toolIcon" src="./img/svg/html.svg" alt="">
+                <img class="toolIcon" src="./img/svg/css.svg" alt="">
+                <img class="toolIcon" src="./img/svg/javascript.svg" alt="">
+            </section>
+
+        </div>
+
+        <section id="creator" class="creator">
+
+            <div class="container">
+                <article>
+                    <img class="avatar" src="./img/emsad.jpg" alt="">
+                    <h2>Emsad Ahmetašević</h2>
+                    <p>Hi !</p>
+                    <p>
+                        I am a positive, creative and fun person seeking more knowledge and opportunities to improve and
+                        show my best.
+                    </p>
+                    <p>In love with web development. Self-taught front-end developer.</p>
+                    <div class="social-icons">
+                        <ul class="social-icons__list">
+                            <li class="social-icons__list-item">
+                                <a class="social-icon linkedin" href="https://www.linkedin.com/in/emsad"
+                                    title="LinkedIn" target="_blank">
+                                    <svg viewbox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M68.4,34.50000610351563 c0,19 -15.3,34.5 -34.2,34.5 c-18.9,0 -34.2,-15.4 -34.2,-34.5 c0,-19 15.3,-34.5 34.2,-34.5 C53.099999999999994,0.000006103515630684342 68.4,15.50000610351563 68.4,34.50000610351563 zM63.400000000000006,93.40000610351564 h-57.8 V280.20000610351565 h57.8 V93.40000610351564 zM155.8,93.40000610351564 h-55.4 V280.20000610351565 h55.4 c0,0 0,-69.3 0,-98 c0,-26.3 12.1,-41.9 35.2,-41.9 c21.3,0 31.5,15 31.5,41.9 c0,26.9 0,98 0,98 h57.5 c0,0 0,-68.2 0,-118.3 c0,-50 -28.3,-74.2 -68,-74.2 c-39.6,0 -56.3,30.9 -56.3,30.9 v-25.2 H155.8 z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-icons__list-item">
+                                <a class="social-icon website" href="https://emsad87.github.io/" title="Website">
+                                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M 16 3 C 8.832 3 3 8.832 3 16 C 3 23.168 8.832 29 16 29 C 23.168 29 29 23.168 29 16 C 29 8.832 23.168 3 16 3 z M 16 5 C 16.338 5 16.67 5.0207813 17 5.0507812 L 17 7 L 15 7 L 14 10 L 13 10 L 13 11 L 18 11 L 19 12 L 20 12 L 20 13 L 19 14 L 15 13 L 11 16 L 11 19 L 13 21 L 16 21 L 16 23.5 L 17 26 L 18 26 L 21 22 L 21 21 L 22 19 L 22 18 L 21 18 L 20 16 L 21 15 L 22.5 16 L 25 15 L 25 14 L 26.808594 14 C 26.928594 14.65 27 15.316 27 16 C 27 22.065 22.065 27 16 27 C 9.935 27 5 22.065 5 16 C 5 9.935 9.935 5 16 5 z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-icons__list-item">
+                                <a class="social-icon github" href="https://github.com/emsad87" title="GitHub"
+                                    target="_blank">
+                                    <svg viewbox="0 0 372 363" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M185.89999389648438,0.000003051757815342171 c-102.6,0 -185.9,83.2 -185.9,185.9 c0,82.1 53.3,151.8 127.1,176.4 c9.3,1.7000000000000002 12.3,-4 12.3,-8.9 V318.7000030517578 c-51.7,11.3 -62.5,-21.9 -62.5,-21.9 c-8.4,-21.5 -20.6,-27.2 -20.6,-27.2 c-16.9,-11.5 1.3,-11.3 1.3,-11.3 c18.7,1.3 28.5,19.2 28.5,19.2 c16.6,28.4 43.5,20.2 54.1,15.4 c1.7000000000000002,-12 6.5,-20.2 11.8,-24.9 c-41.3,-4.7 -84.7,-20.6 -84.7,-91.9 c0,-20.3 7.3,-36.9 19.2,-49.9 c-1.9,-4.7 -8.3,-23.6 1.8,-49.2 c0,0 15.6,-5 51.1,19.1 c14.8,-4.1 30.7,-6.2 46.5,-6.3 c15.8,0.1 31.7,2.1 46.6,6.3 c35.5,-24 51.1,-19.1 51.1,-19.1 c10.1,25.6 3.8,44.5 1.8,49.2 c11.9,13 19.1,29.6 19.1,49.9 c0,71.4 -43.5,87.1 -84.9,91.7 c6.7,5.8 12.8,17.1 12.8,34.4 c0,24.9 0,44.9 0,51 c0,4.9 3,10.7 12.4,8.9 c73.8,-24.6 127,-94.3 127,-176.4 C371.79999389648435,83.20000305175782 288.4999938964844,0.000003051757815342171 185.89999389648438,0.000003051757815342171 z" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <aside>
+                    <img src="./img/creator.png" alt="">
+                </aside>
+            </div>
+
+        </section>
+
+    </main>
 
     <footer>
 
         <div class="container">
+
             <div class="icons">
                 <div class="social-icons">
                     <ul class="social-icons__list">
@@ -204,6 +195,7 @@
                     </ul>
                 </div>
             </div>
+
             <div class="copyright">
                 <p>Copyright &copy; <span class="copy-year"></span> A. Emsad</p>
             </div>
