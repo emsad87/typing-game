@@ -2,8 +2,13 @@ window.addEventListener("load", (event) => {
   // Hide loader when site is loaded
   document.querySelector(".loader").style.display = "none";
 
-  let navToggleBtn = document.querySelector("#js-navbar-toggle");
-  let navLinks = document.querySelector("#js-menu");
+  const navToggleBtn = document.querySelector("#js-navbar-toggle");
+  const navLinks = document.querySelector("#js-menu");
+
+  const sIndicator = document.querySelector(".scroll-indicator");
+  const toTop = document.querySelector(".toTop");
+
+  onScroll();
 
   // Add hamburger to element with id="js-navbar-toggle"
   navToggleBtn.innerHTML = `<span></span><span></span><span></span>`;
@@ -28,4 +33,21 @@ window.addEventListener("load", (event) => {
       return;
     }
   });
+
+  function onScroll() {
+    var y = window.scrollY;
+    if (y >= 50) {
+      sIndicator.style.display = "none";
+      toTop.style.display = "block";
+    } else {
+      sIndicator.style.display = "block";
+      toTop.style.display = "none";
+    }
+  }
+
+  window.addEventListener("scroll", onScroll);
+  toTop.addEventListener(
+    "click",
+    () => (document.documentElement.scrollTop = 0)
+  );
 });

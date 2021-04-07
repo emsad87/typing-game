@@ -1,68 +1,7 @@
+@use "./modules/variables";
+@use "./modules/main";
 @use "./modules/scrollBar";
 @use "./modules/loader";
-@use "./modules/header";
-@use "./modules/intro";
+@use "./modules/navbar";
+@use "./modules/sections";
 @use "./modules/icons";
-
-:root {
-  --main-color: #4b0082;
-  --second-color: #327ea7;
-  --third-color: #384955;
-  --highlight-color: #88b0cd;
-  --main-font: "Ubuntu", sans-serif;
-  --second-font: "Oxygen", sans-serif;
-}
-
-/* Reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-h1,
-h2,
-p {
-  margin-bottom: 15px;
-}
-
-html {
-  scroll-behavior: smooth;
-  /* scroll-snap-type: y mandatory; */
-}
-
-body {
-  font-family: var(--main-font);
-  background-color: var(--highlight-color);
-  color: white;
-}
-
-img,
-video {
-  width: 100%;
-  display: block;
-}
-
-/* svg */
-svg {
-  fill: #fff;
-  display: block;
-  width: 100%;
-}
-
-.playBtn {
-  display: inline-block;
-  background-color: var(--highlight-color);
-  border-radius: 10px;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  color: var(--main-color);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-section {
-  width: 100%;
-}
